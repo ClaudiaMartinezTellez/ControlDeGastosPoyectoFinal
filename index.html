@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Gasto Semanal</title>
+    <!-- <script defer src="App1.js" type="module"></script> -->
+    <script defer src="js/App.js" type="module"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="text-center">Gasto Semanal</h1>
+        </header>
+        <section class="contenido-principal">
+            <div class="row" id="Inicio" style="display:block ;">
+
+                <label for="Seleccionar">Ingresa tu presupuesto </label>
+                <input type="text" style="width: 25%;" class="form-control" id="presupuestoValue" placeholder="$ 100">
+                <br>
+                <button id="btnPresupuesto" class="btn btn-info">Cargar</button>
+
+            </div>
+            <div id="Resumen" style="display:none ;" class="row">
+                <div class="progress">
+                    <div class="progress-bar bg-danger" id="porcentajeGastado" role="progressbar" style="width: 0%;"
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0</div>
+                </div>
+                <label for="Seleccionar">Gastado en: </label>
+                <select id="categorias" class="custom-select" style="width: 50%;"> </select>
+                <button id="filtro" class="btn btn-info">Filtrar</button>
+            </div>
+            <div class="row">
+                <div class="col ">
+                    <div class="contenido primario">
+                        <h2 class="text-center">Añade tus gastos aqui</h2>
+                        <form id="agregar-gasto" action="#">
+                            <div class="form-group">
+                                <label for="gasto">Gasto:</label>
+                                <input type="text" class="form-control" id="gasto" placeholder="Nombre Gasto">
+                            </div>
+                            <div class="form-group">
+                                <label for="cantidad">Cantidad:</label>
+                                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en $">
+                            </div>
+                            <div class="form-group">
+                                <label for="Seleccionar">Categoria</label>
+                                <select name="Ingresa" id="Ingresa" style="width: 80%;" class="custom-select">
+                                    <option value="">--Selecciona--</option>
+                                    <option value="Diezmo">Diezmo</option>
+                                    <option value="Alimentos">Alimentos</option>
+                                    <option value="Transporte">Transporte/gasolina</option>
+                                    <option value="Casa">Casa</option>
+                                    <option value="Servicios">Servicios</option>
+                                    <option value="Medico">Medico</option>
+                                    <option value="Ahorro">Ahorro</option>
+                                    
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Agregar</button>
+                        </form>
+
+                    </div>
+                    <!--.contenido-->
+                </div>
+                <!--.col-->
+
+                <div class="col">
+                    <div class="contenido secundario">
+
+                        <h2 class="text-center">Listado</h2>
+
+                        <div id="gastos">
+                            <ul class="list-group"></ul>
+                        </div>
+                        <div id="presupuesto" class="presupuesto">
+                            <div class="alert alert-primary">
+                                <p>Presupuesto: $ <span id="total"></span> </p>
+                            </div>
+                            <div class="restante alert alert-success">
+                                <p>Restante: $ <span id="restante"></span></p>
+                            </div>
+                            <div class="alert alert-success" id="divTotalFiltrado" style="display:none;">
+                                <p><span id="totalFiltrado"></span></p>
+                            </div>
+                        </div>
+                        <!--.presupuesto-->
+                    </div>
+                    <!--.contenido-->
+                </div>
+                <!--.col-->
+            </div>
+
+        </section>
+    </div>
+</body>
+
+</html>

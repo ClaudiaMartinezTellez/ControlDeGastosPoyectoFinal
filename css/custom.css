@@ -1,0 +1,36 @@
+body {
+    background: url(./img/agendaImg2.jpg)
+}
+header {
+    margin: 30px 0;
+}
+.contenido {
+    padding:10px;
+}
+.contenido-principal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+.presupuesto p{
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.presupuesto p span {
+    font-weight: normal;
+}
+#gastos {
+    margin-bottom: 30px;
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    color: black;
+}
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    color: black;
+    font-size: 22px;
+    margin-bottom:30px;
+}
